@@ -55,6 +55,11 @@ section {
     align-items: center;
 }
 
+input {
+    font-size: 16px;
+    touch-action: manipulation;
+}
+
 .appContainer {
     background-color: var(--primary-color);
     padding: 0px 8px;
