@@ -9,13 +9,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
 </head>
 <body>
-    <section>
+
+    <section class="intro">
+
+        <form class="introForm">
+            <label>Let's get started!</label>
+            <input type="text" class="introInput" placeholder="Enter your name here!" autofocus>
+            <input type="submit" name="submit" id="introSubmit" value="Let's go!">
+
+            <div class="errMsg">
+                
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="main">
 
         <div class="appContainer">
             <div class="appHeader">
                 <div class="appHeaderContent">
-                    <h1>Hey buddy!</h1>
-                    <h3>You have <span class="counter">0</span> tasks today.</h3>
+                    <h1>What's up, <span class="userName"></span>!</h1>
+                    <h3>You have <span class="counter">0</span> tasks for today.</h3>
                 </div>
                 <div class="headerButton">
                     <span class="material-symbols-outlined icon" id="addBtn">

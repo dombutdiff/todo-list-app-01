@@ -1,3 +1,40 @@
+// intro form
+const introForm = document.querySelector(".introForm");
+const introInput = document.querySelector(".introInput");
+
+introForm.addEventListener("submit", submitIntroForm);
+function submitIntroForm() {
+  event.preventDefault();
+
+  if (introInput.value === "") {
+    const errMsg = document.querySelector(".errMsg");
+    errMsg.innerHTML = "Please enter your name";
+    errMsg.classList.add("errMsg-active");
+
+    setTimeout(() => {
+      errMsg.innerHTML = "";
+      errMsg.classList.remove("errMsg-active");
+    }, 1800);
+
+    return;
+  } else {
+    const userName = document.querySelector(".userName");
+    userName.innerHTML =
+      introInput.value.charAt(0).toUpperCase() + introInput.value.slice(1);
+    setTimeout(() => {
+      introForm.classList.add("introForm-remove");
+    }, 300);
+
+    introInput.value = "";
+
+    const main = document.querySelector(".main");
+    setTimeout(() => {
+      main.classList.add("main-active");
+    }, 1200);
+  }
+}
+
+//main form
 const addBtn = document.getElementById("addBtn");
 const closeBtn = document.getElementById("closeBtn");
 const appInputTask = document.querySelector(".appInputTask");
