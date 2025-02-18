@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #1F1F1F;
+    --secondary-color: #F7F6F9;
+    --tertiary-color: #C0C6F4;
+    --quaternary-color: #F6FF7F;
+    --body-color: #D1D2E6;
+}
+
+::-webkit-scrollbar {
+    visibility: hidden;
+    width: 4px;
+    height: 0px;
+}
+
+Track
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #838383; 
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Urbanist', sans-serif;
+}
+
+section {
+    height: 100vh;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appContainer {
+    background-color: var(--primary-color);
+    padding: 0px 8px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 380px; 
+    height: 80%;
+    color: rgba(255, 255, 255, 0.904);
+    position: relative;
+    overflow-x: hidden;
+    
+}
+
+.appHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    padding: 24px 14px;
+    top: 1.4%;
+    z-index: 999;
+}
+
+.appHeader h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.appTaskList {
+    margin-top: .9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#addBtn,
+#deleteBtn {
+    cursor: pointer;
+}
+
+#addBtn {
+    background: var(--tertiary-color);
+    color: var(--primary-color);
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 500ms ease;
+}
+
+#addBtn:hover {
+    transform: scale(0.9);
+}
+
+#deleteBtn {
+    border: 1px solid var(--tertiary-color);
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 500ms ease;
+}
+
+#deleteBtn:hover {
+    transform: scale(0.9);
+}
+
+.appTaskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 12px 14px;
+    color: rgba(0, 0, 0, 0.945);
+    border-radius: 20px;
+    font-size: 16px;
+    margin-bottom: 6px;
+    position: relative;
+    right: 0;
+    transition: all 500ms ease; 
+}
+
+.appTaskItem-remove {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.appForm {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 24px;
+    margin-top: 20px;
+    flex-direction: column;
+    background-color: var(--tertiary-color);
+    color: black;
+    position: absolute;
+    top: -100%;
+    transform: translateY(-50%);
+    padding: 28px 28px;
+    width: 80%;
+    max-width: 360px;
+    transition: all 500ms ease;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.578);
+    z-index: 9999;
+}
+
+.appForm-active {
+    top: 72%;
+}
+
+.closeForm {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--primary-color);
+    transition: all 500ms ease;
+    background: var(--quaternary-color);
+    display: grid;
+    place-items: center;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.closeForm:hover {
+    transform: scale(0.9); ;
+}
+
+.appForm label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: black
+}
+
+.appForm input {
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    outline: none;
+}
+
+.appInputTask {
+    border: 1px solid var(--primary-color);
+    background: var(--tertiary-color);
+    color: black;
+}
+
+#submitBtn {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+    border: 1px solid var(--primary-color);
+    transition: all 500ms ease;
+}
+
+#submitBtn:hover {
+    background: var(--tertiary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.errMsg-active {
+    color: rgb(183, 0, 0);
+    font-size: 14px;
+    margin-top: 6px;
+}
+
