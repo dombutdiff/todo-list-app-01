@@ -55,11 +55,6 @@ section {
     align-items: center;
 }
 
-input {
-    font-size: 16px;
-    touch-action: manipulation;
-}
-
 .appContainer {
     background-color: var(--primary-color);
     padding: 0px 8px;
@@ -86,9 +81,15 @@ input {
     z-index: 999;
 }
 
-.appHeader h1 {
+.appHeaderContent h1 {
     font-size: 24px;
     font-weight: 500;
+}
+
+.appHeaderContent h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.662);
 }
 
 .appTaskList {
