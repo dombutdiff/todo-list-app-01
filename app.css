@@ -55,6 +55,10 @@ section {
     align-items: center;
 }
 
+input {
+    font-size: 16px;
+}
+
 .appContainer {
     background-color: var(--primary-color);
     padding: 0px 8px;
@@ -76,9 +80,13 @@ section {
     background-color: var(--quaternary-color);
     color: var(--primary-color);
     border-radius: 20px;
-    padding: 24px 14px;
+    padding: 18px 14px;
     top: 1.4%;
     z-index: 999;
+}
+
+.appHeaderContent {
+    line-height: 1.8rem;
 }
 
 .appHeaderContent h1 {
@@ -189,7 +197,7 @@ section {
 }
 
 .appForm label {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 12px;
     color: black
